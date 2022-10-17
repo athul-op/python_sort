@@ -1,0 +1,12 @@
+#python
+
+from collections import Counter
+def Sort(s):
+    count= Counter(s)  
+    s= list(s) 
+    s.sort(key=lambda x:(-count[x],x))
+    return "".join(s)
+
+s="cccaaa"    
+Sort(s)
+print(Sort(s))
